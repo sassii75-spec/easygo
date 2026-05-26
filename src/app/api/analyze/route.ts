@@ -2,9 +2,8 @@
 import { NextResponse } from 'next/server';
 import OpenAI from 'openai';
 
-const openai = new OpenAI();
-
 export async function POST(req: Request) {
+  const openai = new OpenAI();
   try {
     const { images } = await req.json();
 
